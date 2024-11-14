@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Lapsus Development",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -22,8 +22,9 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "type": "github"
+    "name": "ManucrackYT/LapsusClient",
+    "url": "https://github.com/ManucrackYT/LapsusClient"
   },
   "tabs": [
     {
