@@ -17,12 +17,12 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Website",
+      "url": "https://lapsusdev.tech"
     }
   ],
   "topbarCtaButton": {
-    "type": "github"
+    "type": "github",
     "name": "ManucrackYT/LapsusClient",
     "url": "https://github.com/ManucrackYT/LapsusClient"
   },
