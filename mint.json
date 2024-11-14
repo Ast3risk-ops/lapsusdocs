@@ -15,12 +15,6 @@
       "to": "#07C983"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Website",
-      "url": "https://lapsusdev.tech"
-    }
-  ],
   "topbarCtaButton": {
     "type": "github",
     "url": "https://github.com/ManucrackYT/LapsusClient"
