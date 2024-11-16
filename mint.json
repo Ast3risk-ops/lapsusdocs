@@ -28,6 +28,9 @@
   "sidebar": {
     "items": "container"
   },
+  "primaryTab": {
+    "name": "Welcome"
+  },
   "topbarCtaButton": {
     "type": "github",
     "url": "https://github.com/ManucrackYT/LapsusClient"
@@ -61,7 +64,18 @@
     {
       "group": "",
       "pages": [
-        "client/introduction"
+        "client/introduction",
+        "client/quickstart",
+        "client/installation",
+        {
+          "group": "Reference",
+          "icon": "gear",
+          "iconType": "duotone",
+          "pages": [
+            "client/reference/config",
+            "client/reference/os-support"
+          ]
+        }
       ]
     },
     {
