@@ -2,12 +2,15 @@
 title: "Configuration"
 icon: "file-pen"
 iconType: "duotone"
+description: "Customize your client with settings.json"
 ---
 
 <Accordion
     title="Example Config"
+    icon="file-code"
+    iconType="duotone"
 >
-    ```json
+    ```json config.json
     {
   "version": "2.7",
   "name": "Lapsus Client",
@@ -416,3 +419,15 @@ iconType: "duotone"
 }
     ```
 </Accordion>
+
+<ParamField path="name" type="string" default="Lapsus Launcher" required>
+  Name of your company as it will show in the panel.
+</ParamField>
+<ParamField path="logo" type="array" required>
+  The logo as shown in the panel. Contains a URL parameter.
+  <Expandable title="options">
+   <ParamField path="url" type="string" required default='/assets/img/logo_background.png'>
+     A path or URL of an image
+   </ParamField> 
+  </Expandable>
+</ParamField>
