@@ -40,9 +40,9 @@
     "url": "https://github.com/ManucrackYT/LapsusClient"
   },
   "topAnchor": {
-    "name": "Welcome",
-    "icon": "hand-wave",
-    "iconType": "solid"
+    "name": "Home",
+    "icon": "house-chimney",
+    "iconType": "duotone"
   },
   "anchors": [
     {
@@ -62,7 +62,7 @@
     {
       "group": "",
       "pages": [
-        "index"
+        "welcome"
       ]
     },
     {
