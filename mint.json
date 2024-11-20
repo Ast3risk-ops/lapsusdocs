@@ -69,6 +69,7 @@
       "group": "",
       "pages": [
         "client/introduction",
+        "client/changelog",
         "client/quickstart",
         "client/installation",
         {
