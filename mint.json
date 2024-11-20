@@ -72,20 +72,13 @@
         "client/changelog",
         "client/quickstart",
         "client/installation",
-        {
-          "group": "Reference",
-          "icon": "gear",
-          "iconType": "duotone",
-          "pages": [
-            "client/reference/os-support"
-          ]
-        }
       ]
     },
     {
       "group": "Reference",
       "pages": [
-        "client/reference/config"
+        "client/reference/config",
+        "client/reference/os-support"
       ]
     },
     {
