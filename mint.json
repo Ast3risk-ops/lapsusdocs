@@ -77,10 +77,15 @@
           "icon": "gear",
           "iconType": "duotone",
           "pages": [
-            "client/reference/config",
             "client/reference/os-support"
           ]
         }
+      ]
+    },
+    {
+      "group": "Reference",
+      "pages": [
+        "client/reference/config"
       ]
     },
     {
