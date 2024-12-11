@@ -84,7 +84,7 @@ Now open `settings.json` and edit the file as you need, we recommend changing th
 
 ## 💉 Starting the Client
 
-Now click the ![](<../.gitbook/assets/imagen (2).png>)  button if the server hasn't started yet, if you have set everything correctly, Lapsus Client will show something like this:
+Now click the <img src="../.gitbook/assets/imagen (2).png" alt="" data-size="line">  button if the server hasn't started yet, if you have set everything correctly, Lapsus Client will show something like this:
 
 <figure><img src="../.gitbook/assets/imagen (10).png" alt=""><figcaption><p>If you see this, congratulations! You have setup everything correctly to use Lapsus Client</p></figcaption></figure>
 
