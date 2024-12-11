@@ -1,33 +1,37 @@
-# Mintlify Starter Kit
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: false
+---
 
-Click on `Use this template` to copy the Mintlify starter kit. The starter kit contains examples including
+# 👋 Welcome
 
-- Guide pages
-- Navigation
-- Customizations
-- API Reference pages
-- Use of popular components
+Lapsus Client is a Pterodactyl client area with a unique design, thriving marketplace, and loads of features.
 
-### Development
+***
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command
+<table data-card-size="large" data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><h2><span data-gb-custom-inline data-tag="emoji" data-code="1f4da">📚</span> Get Started</h2></td><td>Install Lapsus Client</td><td></td><td><a href="getting-started.md">getting-started.md</a></td></tr><tr><td><h2><span data-gb-custom-inline data-tag="emoji" data-code="1f4c4">📄</span> Reference</h2></td><td>Learn about the config</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><h2><span data-gb-custom-inline data-tag="emoji" data-code="2049">⁉️</span> Troubleshooting</h2></td><td>Have issues?</td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><h2><span data-gb-custom-inline data-tag="emoji" data-code="1f9e9">🧩</span> Extensions</h2></td><td>Learn how to use and install extensions and themes.</td><td></td><td><a href="installation/extensions-and-themes.md">extensions-and-themes.md</a></td></tr></tbody></table>
 
-```
-npm i -g mintlify
-```
+***
 
-Run the following command at the root of your documentation (where mint.json is)
+## Features
 
-```
-mintlify dev
-```
-
-### Publishing Changes
-
-Install our Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
-
-#### Troubleshooting
-
-- Mintlify dev isn't running - Run `mintlify install` it'll re-install dependencies.
-- Page loads as a 404 - Make sure you are running in a folder with `mint.json`
-
+* 🖌️ **Customizable Client Area.**
+  * Change name and logo easily
+  * Customize news as you want, modify the news title, picture, description and link
+* 📂 **See your servers, all in one place.**
+  * See which servers you have created on the Dashboard and access them with a single buttton
+* 🔑 **Discord Authentication**
+  * Using Discord Oauth for a _faster_ access to your account
+* 📰 **News feed added into the Client Area: explore and add your best news.**
+* 🛒 **Buy extra resources for your server.**
+* **🪙 Earn coins while you make a good coffee, you don't need to touch the device to earn coins!**
+* **❤️ Transfer your resources to friends or receive resources by your friends.**
