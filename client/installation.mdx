@@ -3,3 +3,97 @@ title: "Manual Installation"
 icon: "wrench"
 iconType: "duotone"
 ---
+
+<Warning>Make sure you have NodeJS and Pterodactyl set up!</Warning>
+
+<Steps titleSize="h3">
+<Step title="Download the code">
+Go to the latest [Lapsus Client release](https://github.com/ManucrackYT/LapsusClient/releases/latest) and download `Source Code (zip)`. Upload the ZIP to your server and extract it.
+</Step>
+<Step title="Edit essential settings">
+  To get a quick basic panel up, you need to change a few things in [`config.json`](/client/reference/config):
+  
+  <Steps>
+    <Step title="Set the name and logo" icon="id-card" iconType="solid">
+        ```json settings.json
+        "name": "Lapsus Client",
+          "logo": {
+            "url": "/assets/img/logo_background.png"
+          },
+        ```
+    </Step>
+    <Step title="Change the port and admin secret" icon="plug" iconType="solid">
+        ```json settings.json
+        "website": {
+          "port": 8000,
+          "secret": "changeme"
+        },
+        ```
+    </Step>
+    <Step title="Add Pterodactyl details" icon="gamepad" iconType="sharp-solid">
+       ```json settings.json
+       "pterodactyl": {
+          "domain": "https://panel.yourdomain.com",
+          "key": "ptla_",
+          "account_key": "ptlc_"
+        },
+       ```
+    </Step>
+    <Step title="Add Discord OAuth settings" icon="discord" iconType="brands">
+       ```json settings.json
+       "oauth2": {
+          "_comment": "Go to https://discord.dev/ and create an application to set these up.",
+          "id": "",
+          "secret": "",
+          "link": "http://localhost:8080",
+       ```
+       Then add the redirect to your Discord Developer portal (covered in more detail in the Discord section)
+       <Frame caption="On the Discord Developer Portal, your redirect must end with /callback.">
+       ![Discord Callback Setttings](/assets/img/discord-callback.png)
+       </Frame>
+    </Step>
+  </Steps>
+</Step>
+<Step title="Start the client">
+  Now run `node .` in the same folder. You should see something like this:
+
+  ![Terminal window of a successful install](/assets/img/terminal.png)
+  
+  Login using the URL shown in the terminal:
+  <Frame>
+  ![Login window](/assets/img/lapsus.jpg)
+  </Frame>
+</Step>
+</Steps>
+
+<Check>Lapsus client is now working! Continue on to [configuration](/client/reference/config) and integrations.</Check>
+
+<Accordion
+  title="Running Lapsus Client in the background"
+>
+<Note>This requires Linux as PM2 does not support the Windows process manager.</Note>
+<Steps titleSize="h3">
+
+<Step title="Install PM2">
+```sh
+npm i -g pm2@latest
+```
+</Step>
+<Step title="Make PM2 run at startup">
+```sh
+pm2 startup
+```
+</Step>
+<Step title="Add Lapsus to PM2 (from the Lapsus Client folder)">
+
+```sh
+pm2 start .
+```
+</Step>
+<Step title="Save your PM2 process list">
+```sh
+pm2 save
+```
+</Step>
+</Steps>
+</Accordion>
