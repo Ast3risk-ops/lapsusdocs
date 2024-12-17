@@ -420,14 +420,133 @@ description: "Customize your client with settings.json"
     ```
 </Accordion>
 
-<ParamField path="name" type="string" default="Lapsus Launcher" required>
-  Name of your company as it will show in the panel.
-</ParamField>
-<ParamField path="logo" type="array" required>
-  The logo as shown in the panel. Contains a URL parameter.
-  <Expandable title="options">
-   <ParamField path="url" type="string" required default='/assets/img/logo_background.png'>
-     Path or URL to an image
-   </ParamField> 
-  </Expandable>
-</ParamField>
+
+| Option           | Default                    | Description                                                                                                                           |
+| ---------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`           | `Lapsus Client`            | The name of your client as displayed to users                                                                                         |
+| `defaulttheme`   | `lapsus`                   | The default client theme                                                                                                              |
+| `timezone`       | `Europe/London`            | Server timezone                                                                                                                       |
+| `main_web`       |                            | Your client URL for production (ideally no port on the end, see reverse proxy docs for doing this)                                    |
+| `discord_server` |                            | The URL to your host's Discord Server                                                                                                 |
+| `database`       | `sqlite://database.sqlite` | The path to an SQLite database file, starting with <code>sqlite://</code><br /><br /> ℹ️ The file will be created if it does not exist |
+
+## `logo`
+
+| Option | Default                          | Description                                                                                 |
+| ------ | -------------------------------- | ------------------------------------------------------------------------------------------- |
+| `url`  | `assets/img/logo_background.png` | The logo/favicon of your client. Can be local path (relative to install root) or remote URL |
+
+## `news`
+
+<Tip>`new` entries here are incremented by 1 (ex. `new1`, `new2`, etc). We will use `new1` for reference, but it can be `new(any number)` to create new news entries.</Tip>
+
+| Option             | Default | Description                                                   |
+| ------------------ | ------- | ------------------------------------------------------------- |
+| `new1_type`        |         | News type<br /><br />Can be whatever you want              |
+| `new1_title`       |         | Title of news post                                            |
+| `new1_message`     |         | Content of news post                                          |
+| `new1_img`         |         | Cover image for news post <br /><br />Can be a path or URL |
+| `new1_button_text` |         | Text for the CTA button                                       |
+| `new1_button_url`  |         | URL for the CTA button                                        |
+
+## `resources`
+
+| Option | Default | Description                                                                        |
+| ------ | ------- | ---------------------------------------------------------------------------------- |
+| `type` | `MB`    | Unit used to show resources <br /><br /> Can be: <code>MB</code>, <code>GB</code> |
+
+## `website`
+
+| Option   | Default | Description                                                                                                                                                                                                                                                              |
+| -------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `port`   | `8000`  | Port used to access Lapsus<br /><br />⚠️ This is HTTP-only. To set up HTTPS, please set up [a reverse proxy](/client/reference/reverse-proxy). |
+| `secret` |         | The password to access the admin dashboard                                                                                                                                                                                                                               |
+
+## `pterodactyl`
+
+| Option        | Default | Description                                                  |
+| ------------- | ------- | ------------------------------------------------------------ |
+| `domain`      |         | Link to your [Pterodactyl ](https://pterodactyl.io)panel     |
+| `key`         |         | Your [Pterodactyl](https://pterodactyl.io) API key           |
+| `account_key` |         | Your [Pterodactyl](https://pterodactyl.io) admin account key |
+
+## `storelimits`
+
+| Option    | Default | Description                      |
+| --------- | ------- | -------------------------------- |
+| `ram`     | `5120`  | Maximum RAM users can buy        |
+| `disk`    | `8240`  | Maximum disk space users can buy |
+| `cpu`     | `300`   | Maximum CPU users can buy        |
+| `servers` | `3`     | Maximum servers users can buy    |
+
+## `api`
+
+### `client`
+
+#### `misc`
+
+| Option   | Default | Description          |
+| -------- | ------- | -------------------- |
+| `purger` | `true`  | :warning:Depreceated |
+| `getip`  | `true`  | :warning:Depreceated |
+
+### `webhook`
+
+| Option      | Default | Description                                |
+| ----------- | ------- | ------------------------------------------ |
+| `auditlogs` | `false` | Send auditlogs through the Discord webhook |
+
+### `api` (client)
+
+<Warning>This is different from the _other_ [`api`](#api).</Warning>
+
+| Option    | Default  | Description                 |
+| --------- | -------- | --------------------------- |
+| `enabled` | `false`  | Enables webhooks            |
+| `code`    | `lapsus` | :warning:Do not change this |
+
+### `j4r`
+
+<Info>For a guide on all this, see [J4R](/client/reference/discord#j4r-join-4-rewards).</Info>
+
+| Option    | Default | Description                      |
+| --------- | ------- | -------------------------------- |
+| `enabled` | `false` | Enables **J4R** (Join 4 Rewards) |
+
+#### `ads`
+
+<Tip>You can have multiple ad blocks within this section. See the example config for details.</Tip>
+
+| Option   | Default | Description                                                                                                                |
+| -------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `name`   |         | The name of the Discord server                                                                                             |
+| `invite` |         | The invite link                                                                                                            |
+| `id`     |         | The server's Guild ID |
+| `coins`  |         | The amount of coins to give after joining |                                                                               |
+
+### `bot`
+
+| Option  | Default | Description      |
+| ------- | ------- | ---------------- |
+| `token` |         | Your bot's token |
+
+#### `joinguild`
+
+| Option    | Default | Description                                                                                                                 |
+| --------- | ------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `enabled` | `true`  | Is automatic guild joining enabled? <br /><br />(OAuth2 app joins the guild on the user's behalf during login)          |
+| `guildid` |         | Your server's Guild ID |
+
+### `passwordgenerator`
+
+| Option   | Default | Description                   |
+| -------- | ------- | ----------------------------- |
+| `signup` | `true`  | Are signups enabled?          |
+| `length` | `16`    | Length of generated passwords |
+
+### `allow`
+
+| Option     | Default | Description                      |
+| ---------- | ------- | -------------------------------- |
+| `newusers` | `true`  | Are new users allowed to signup? |
+| `regen`    |         |                                  |

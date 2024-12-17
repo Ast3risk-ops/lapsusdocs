@@ -79,7 +79,16 @@
       "group": "Reference",
       "pages": [
         "client/reference/config",
+        "client/reference/updating",
+        "client/reference/reverse-proxy",
+        "client/reference/discord",
         "client/reference/os-support"
+      ]
+    },
+    {
+      "group": "Troubleshooting",
+      "pages": [
+        "client/troubleshooting/common-errors"
       ]
     },
     {

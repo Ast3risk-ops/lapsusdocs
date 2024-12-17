@@ -1,0 +1,33 @@
+---
+title: Common Errors
+description: Troubleshoot common issues with Lapsus Client
+icon: interrobang
+iconType: duotone
+---
+
+<AccordionGroup>
+<Accordion title="400 - No nodes satisfying the requirements specified for automatic deployment could be found.">
+
+Check the locations section in [`settings.json`](/client/reference/config): The ID used should be the **location ID**, not the node ID.
+</Accordion>
+<Accordion title="503 - There was an error while communicating with the machine running this server. This error has been logged, please try again.">
+    Check the node status and use the vanilla Lapsus theme, not a modification.
+</Accordion>
+<Accordion title="404 when resetting my password">
+    <Steps titleSuze="h3">
+        <Step title="Replace [api/extras.js] in your client folder">
+        Replace the old file with <Tooltip tip="Right-click me and choose Save Link As...">[this one](https://raw.githubusercontent.com/ManucrackYT/LapsusClient/139043e81f2e14f6ad929135a0dbe46fcfd2a4be/api/extras.js)</Tooltip>    
+        </Step>
+        <Step title="Restart Lapsus Client"></Step>
+    </Steps>
+</Accordion>
+<Accordion title="Unable to change a user's plan through the UI">
+    Put this URL in your browser:
+    ![YOUR_LAPSUSCLIENT_URL/setplan?USER_ID&package=PACKAGE_NAME](/assets/img/planurl.png)
+    * Replace `localhost:8080`  with your IP address or domain
+    * Replace `693801767766458408` with the ID of the user whose package you wish to change
+    * Replace `premium` with the name of the package (package types are listed in [`settings.json`](/client/reference/config))
+    
+    After you press <kbd>Enter</kbd>, the user's plan will be changed.
+</Accordion>
+</AccordionGroup>

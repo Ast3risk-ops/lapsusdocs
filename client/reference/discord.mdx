@@ -1,0 +1,44 @@
+---
+title: Discord Setup
+description: Set up Lapsus Clienbt's Discord features
+icon: discord
+iconType: brands
+---
+
+## Login
+
+Head on over to the [Discord Dev Portal](https://discord.com/developers/applications) and create a new application.
+
+![Click Create](/assets/img/createapp.png)
+
+Give it a name and create it under **Personal** (or a team it doesn't really matter).
+
+Set your app's name and icon, this is what users will see on the login screen. Set a TOS and Privacy Policy URL if your host has them, these will also be shown at login.
+
+![Set the above app details](/assets/img/appdetails.png)
+
+Next go to **OAuth2**, then add a **Redirect**. This redirect should be the URL to your client (the public one, set as `oauth2.link`) with `/callback`.
+
+Example:
+
+![\<YOUR_CLIENT_URL\>/callback](/assets/img/oauth2redirect.png)
+
+Next copy your `Client ID` and `Client Secret`.
+
+![This image just shows where that is](/assets/img/clientid.png)
+
+Configure everything in [`config.json`](/client/reference/config) now:
+
+
+```json config.json
+      "oauth2": {
+        "_comment": "Go to https://discord.dev/ and create an application to set these up.",
+        "id": "APPLICATION_ID",
+        "secret": "YOUR_SECRET",
+        "link": "https://YOUR_DOMAIN",
+        // Rest of file
+```
+
+## J4R (Join 4 Rewards)
+
+<Info>Coming Soon!</Info>
