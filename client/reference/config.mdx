@@ -428,7 +428,7 @@ description: "Customize your client with settings.json"
 | `timezone`       | `Europe/London`            | Server timezone                                                                                                                       |
 | `main_web`       |                            | Your client URL for production (ideally no port on the end, see reverse proxy docs for doing this)                                    |
 | `discord_server` |                            | The URL to your host's Discord Server                                                                                                 |
-| `database`       | `sqlite://database.sqlite` | The path to an SQLite database file, starting with <code>sqlite://</code><br /><br /> ℹ️ The file will be created if it does not exist |
+| `database`       | `sqlite://database.sqlite` | The path to an SQLite database file, starting with <code>sqlite://</code><br /><br /> <Info>The file will be created if it does not exist.</Info> |
 
 ## `logo`
 
@@ -487,14 +487,14 @@ description: "Customize your client with settings.json"
 
 | Option   | Default | Description          |
 | -------- | ------- | -------------------- |
-| `purger` | `true`  | :warning:Depreceated |
-| `getip`  | `true`  | :warning:Depreceated |
+| `purger` | `true`  | ⚠️ Depreceated |
+| `getip`  | `true`  | ⚠️ Depreceated |
 
 ### `webhook`
 
 | Option      | Default | Description                                |
 | ----------- | ------- | ------------------------------------------ |
-| `auditlogs` | `false` | Send auditlogs through the Discord webhook |
+| `auditlogs` | `false` | Send auditlogs through the Discord webhook? |
 
 ### `api` (client)
 
