@@ -71,6 +71,7 @@
         "client/introduction",
         "client/changelog",
         "client/quickstart",
+        "client/egg",
         "client/installation"
       ]
     },

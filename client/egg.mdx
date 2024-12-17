@@ -1,23 +1,20 @@
 ---
-title: "Quickstart"
-description: "Set up your client area"
-icon: "rocket-launch"
-iconType: "duotone"
+title: Egg Installation
+description: Set up Lapsus Client on Pterodactyl
+icon: egg
+iconType: duotone
 ---
 
-## Requirements
-
-- A **server** running a [supported OS and NodeJS version](/client/reference/os-support)
-- A **Pterodactyl-compatible** panel
-
-## Installation
-
 <Steps titleSize="h3">
-<Step title="Run the installation script">
-<Note>This script is for Debian-based Linux systems only and requires you to be logged in as `root`.</Note>
-```bash
-bash <(curl -s https://raw.githubusercontent.com/lapsusdevs/script/main/manager.sh)
-```
+<Step title="Download the egg">
+Download the <Tooltip tip="Right click me and choose Save Link As...">[egg file](https://github.com/lapsusdevs/egg/raw/main/egg-lapsus-client.json)</Tooltip>.
+</Step>
+<Step title="Import the egg">
+    Go to your Pterodactyl admin area and go to **Nests > Import Egg**. Upload the egg file from your computer, pick a nest group and click `Import`.
+    ![Egg Importer Example](/assets/img/egg-import.png)
+</Step>
+<Step title="Create a server">
+Go to **Servers > Create New** and set the name, owner and node. Choose the **Lapsus Client** egg. Wait for the installation to finish and continue with the following steps.
 </Step>
 <Step title="Edit essential settings">
   To get a quick basic panel up, you need to change a few things in [`config.json`](/client/reference/config):
@@ -64,45 +61,13 @@ bash <(curl -s https://raw.githubusercontent.com/lapsusdevs/script/main/manager.
   </Steps>
 </Step>
 <Step title="Start the client">
-  Now run `node .` in the same folder. You should see something like this:
+Click the `Start` button (if the server hasn't started yet). You should see something like this:
 
-  ![Terminal window of a successful install, should have a URL](/assets/img/terminal.png)
-  
+![Terminal output, should have a URL you can access](/assets/img/terminal.png)
   Login using the URL shown in the terminal:
   <Frame>
   ![Login window](/assets/img/lapsus.jpg)
   </Frame>
 </Step>
 </Steps>
-
 <Check>Lapsus Client is now working! Continue on to [configuration](/client/reference/config) and integrations.</Check>
-
-<Accordion
-  title="Running Lapsus Client in the background"
->
-<Note>This requires Linux as PM2 does not support the Windows process manager.</Note>
-<Steps titleSize="h3">
-
-<Step title="Install PM2">
-```sh
-npm i -g pm2@latest
-```
-</Step>
-<Step title="Make PM2 run at startup">
-```sh
-pm2 startup
-```
-</Step>
-<Step title="Add Lapsus to PM2 (from the Lapsus Client folder)">
-
-```sh
-pm2 start .
-```
-</Step>
-<Step title="Save your PM2 process list">
-```sh
-pm2 save
-```
-</Step>
-</Steps>
-</Accordion>
