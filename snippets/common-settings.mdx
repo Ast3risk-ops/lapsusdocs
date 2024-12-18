@@ -1,0 +1,40 @@
+  <Steps>
+    <Step title="Set the name and logo" icon="id-card" iconType="solid">
+        ```json settings.json
+        "name": "Lapsus Client",
+          "logo": {
+            "url": "/assets/img/logo_background.png"
+          },
+        ```
+    </Step>
+    <Step title="Change the port and admin secret" icon="plug" iconType="solid">
+        ```json settings.json
+        "website": {
+          "port": 8000,
+          "secret": "changeme"
+        },
+        ```
+    </Step>
+    <Step title="Add Pterodactyl details" icon="gamepad" iconType="sharp-solid">
+       ```json settings.json
+       "pterodactyl": {
+          "domain": "https://panel.yourdomain.com",
+          "key": "ptla_",
+          "account_key": "ptlc_"
+        },
+       ```
+    </Step>
+    <Step title="Add Discord OAuth settings" icon="discord" iconType="brands">
+       ```json settings.json
+       "oauth2": {
+          "_comment": "Go to https://discord.dev/ and create an application to set these up.",
+          "id": "",
+          "secret": "",
+          "link": "http://localhost:8080",
+       ```
+       Then add the redirect to your Discord Developer portal (covered in more detail in the Discord section)
+       <Frame caption="On the Discord Developer Portal, your redirect must end with /callback.">
+       ![Discord Callback Setttings](/assets/img/discord-callback.png)
+       </Frame>
+    </Step>
+  </Steps>

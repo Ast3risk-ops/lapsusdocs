@@ -5,6 +5,8 @@ icon: egg
 iconType: duotone
 ---
 
+import commonSettings from '/snippets/common-settings.mdx';
+
 <Steps titleSize="h3">
 <Step title="Download the egg">
 Download the <Tooltip tip="Right click me and choose Save Link As...">[egg file](https://github.com/lapsusdevs/egg/raw/main/egg-lapsus-client.json)</Tooltip>.
@@ -18,47 +20,7 @@ Go to **Servers > Create New** and set the name, owner and node. Choose the **La
 </Step>
 <Step title="Edit essential settings">
   To get a quick basic panel up, you need to change a few things in [`config.json`](/client/reference/config):
-  
-  <Steps>
-    <Step title="Set the name and logo" icon="id-card" iconType="solid">
-        ```json settings.json
-        "name": "Lapsus Client",
-          "logo": {
-            "url": "/assets/img/logo_background.png"
-          },
-        ```
-    </Step>
-    <Step title="Change the port and admin secret" icon="plug" iconType="solid">
-        ```json settings.json
-        "website": {
-          "port": 8000,
-          "secret": "changeme"
-        },
-        ```
-    </Step>
-    <Step title="Add Pterodactyl details" icon="gamepad" iconType="sharp-solid">
-       ```json settings.json
-       "pterodactyl": {
-          "domain": "https://panel.yourdomain.com",
-          "key": "ptla_",
-          "account_key": "ptlc_"
-        },
-       ```
-    </Step>
-    <Step title="Add Discord OAuth settings" icon="discord" iconType="brands">
-       ```json settings.json
-       "oauth2": {
-          "_comment": "Go to https://discord.dev/ and create an application to set these up.",
-          "id": "",
-          "secret": "",
-          "link": "http://localhost:8080",
-       ```
-       Then add the redirect to your Discord Developer portal (covered in more detail in the Discord section)
-       <Frame caption="On the Discord Developer Portal, your redirect must end with /callback.">
-       ![Discord Callback Setttings](/assets/img/discord-callback.png)
-       </Frame>
-    </Step>
-  </Steps>
+<commonSettings />
 </Step>
 <Step title="Start the client">
 Click the `Start` button (if the server hasn't started yet). You should see something like this:
